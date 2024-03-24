@@ -19,8 +19,6 @@ dependency "aws-security-group" {
 }
 
 inputs = {
-  environment                = "production"
-  region                     = "us-east-1"
   ubuntu_ami_id              = dependency.aws-ami.outputs.ubuntu_ami_id
   app_server_security_groups = dependency.aws-security-group.outputs.app_server_security_groups
   key_pair_name              = dependency.aws-key-pair.outputs.app_key_name

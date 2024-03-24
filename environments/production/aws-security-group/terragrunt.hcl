@@ -11,9 +11,7 @@ dependency "aws-vpc" {
 }
 
 inputs = {
-  environment   = "production"
-  region        = "us-east-1"
-  vpc_id        = dependency.aws-vpc.outputs.vpc_id
+  vpc_id  = dependency.aws-vpc.outputs.vpc_id
 }
 
 

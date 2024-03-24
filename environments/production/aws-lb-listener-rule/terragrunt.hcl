@@ -16,8 +16,6 @@ dependency "aws-lb-target-group" {
 }
 
 inputs = {
-  environment            = "production"
-  region                 = "us-east-1"
   app_alb_listener_arn   = dependency.aws-lb-listener.outputs.app_alb_listener_arn
   app_target_group_arn   = dependency.aws-lb-target-group.outputs.app_target_group_arn
 }

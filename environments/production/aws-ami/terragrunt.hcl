@@ -6,9 +6,3 @@ include "root" {
   path = find_in_parent_folders()
 }  
 
-inputs = {
-  environment                = "production"
-  region                     = "us-east-1"
-}
-
-

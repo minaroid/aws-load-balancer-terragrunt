@@ -21,3 +21,18 @@ variable "region" {
   type    = string
   default = ""
 }
+
+variable "max_size" {
+  type    = number
+  default = 2
+}
+
+variable "min_size" {
+  type    = number
+  default = 2
+}
+
+variable "desired_capacity" {
+  type    = number
+  default = 2
+}

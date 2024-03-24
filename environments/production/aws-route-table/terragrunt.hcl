@@ -23,8 +23,6 @@ dependency "aws-nat-gateway" {
 }
 
 inputs = {
-  environment         = "production"
-  region              = "us-east-1"
   vpc_id              = dependency.aws-vpc.outputs.vpc_id
   igw_id              = dependency.aws-internet-gateway.outputs.igw_id
   public_subnets_ids  = dependency.aws-subnet.outputs.public_subnets_ids
@@ -32,6 +30,3 @@ inputs = {
   private_subnets_ids = dependency.aws-subnet.outputs.private_subnets_ids
   nat_gateways_ids    = dependency.aws-nat-gateway.outputs.nat_ids
 }
- 
-
-

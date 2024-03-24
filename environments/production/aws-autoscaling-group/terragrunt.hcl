@@ -20,11 +20,12 @@ dependency "aws-lb-target-group" {
 }
 
 inputs = {
-  environment                 = "production"
-  region                      = "us-east-1"
   private_subnets_ids         = dependency.aws-subnet.outputs.private_subnets_ids
   app_launch_configuration_id = dependency.aws-launch-configuration.outputs.app_launch_configuration_id
   app_target_group_arn        = dependency.aws-lb-target-group.outputs.app_target_group_arn
+  max_size                    = 5
+  min_size                    = 2
+  desired_capacity            = 2
 }
 
 

@@ -7,8 +7,6 @@ include "root" {
 }  
 
 inputs = {
-  environment                = "production"
-  region                     = "us-east-1"
   ssh_public_key_location    = "~/.ssh/id_rsa.pub"
 }
 

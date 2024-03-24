@@ -11,8 +11,6 @@ dependency "aws-subnet" {
 }
 
 inputs = {
-  environment                 = "production"
-  region                      = "us-east-1"
   public_subnets_ids          = dependency.aws-subnet.outputs.public_subnets_ids
 }
  

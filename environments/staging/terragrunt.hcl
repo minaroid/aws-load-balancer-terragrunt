@@ -5,7 +5,7 @@ generate "backend" {
   terraform {
     backend "s3" {
       bucket = "terraform-myapp-bucket-500"
-      key    = "production/${path_relative_to_include()}/terraform.tfstate"
+      key    = "staging/${path_relative_to_include()}/terraform.tfstate"
       region = "us-east-1"
     }
   }  
@@ -14,7 +14,7 @@ generate "backend" {
 
 
 inputs = {
-  environment   = "production"
+  environment   = "staging"
   region        = "us-east-1"
 }
 

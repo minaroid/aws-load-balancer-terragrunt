@@ -11,3 +11,10 @@ generate "backend" {
   }  
   EOF
 }
+
+
+inputs = {
+  environment   = "development"
+  region        = "us-east-1"
+}
+
